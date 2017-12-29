@@ -12,6 +12,7 @@ Example
 
 import pandas as pd
 from datetime import datetime
+import os
 
 
 def convert_date_time_tuple_into_date_time_object(date_time_tuple):
@@ -91,21 +92,58 @@ def read_weather_data_from_csv(csv_path):
 
     return original_df
 
+
 def merge_data_frames_by_column(df1, df2, column_name):
     return pd.merge(df1, df2, on=column_name)
 
 
+def compute_aggregate_load_data():
+
+    # get a list of all the csv file names in the 'system_load_by_region' directory
+    files = filter(lambda x: x[-4:] == ".csv", os.listdir('system_load_by_region'))
+
+    # convert the list of csv file names to a list of corresponding DataFrames
+    dfs = map(lambda file_name: read_load_data_from_csv("./system_load_by_region/" + file_name), files)
+
+    # fold the list of data frames into a single data frame
+    aggregate_df = reduce(lambda df1, df2: pd.concat([df1, df2]), dfs)
+
+    return aggregate_df
+
+
+def compute_aggregate_weather_data():
+
+    # get a list of all the csv files names in the 'weather_data' directory
+    files = filter(lambda x: x[-4:] == ".csv", os.listdir('weather_data'))
+
+    # convert the list of csv file names to a list of corresponding DataFrames
+    dfs = map(lambda file_name: read_weather_data_from_csv("./weather_data/" + file_name), files)
+
+    # fold the list of data frames into a single data frame
+    aggregate_df = reduce(lambda df1, df2: pd.concat([df1, df2]), dfs)
+
+    return aggregate_df
+
 # Testing
-df1 = read_load_data_from_csv("./system_load_by_region/cdr.00013101.0000000000000000.20140102.055001.ACTUALSYSLOADWZNP6345.csv")
-df2 = read_weather_data_from_csv("./weather_data/KDAL_20140101.csv")
+load_data = compute_aggregate_load_data()
+weather_data = compute_aggregate_weather_data()
 
+# Merge the weather and load data into a single DataFrame
+total = pd.merge(load_data,weather_data,on="Date")
 
-print df1.head()
-print "-"*50
-print df2.head()
+print total.head()
+print total.shape
 
-print "\nMERGING\n"
-print merge_data_frames_by_column(df1, df2, "Date")
+# df1 = read_load_data_from_csv("./system_load_by_region/cdr.00013101.0000000000000000.20140102.055001.ACTUALSYSLOADWZNP6345.csv")
+# df2 = read_weather_data_from_csv("./weather_data/KDAL_20140101.csv")
+#
+#
+# print df1.head()
+# print "-"*50
+# print df2.head()
+#
+# print "\nMERGING\n"
+# print merge_data_frames_by_column(df1, df2, "Date")
 
 
 
