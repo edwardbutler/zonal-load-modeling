@@ -1,0 +1,37 @@
+TimeCDT,TemperatureF,Dew PointF,Humidity,Sea Level PressureIn,VisibilityMPH,Wind Direction,Wind SpeedMPH,Gust SpeedMPH,PrecipitationIn,Events,Conditions,WindDirDegrees,DateUTC
+12:51 AM,73.9,68.0,82,29.73,10.0,South,9.2,-,N/A,,Mostly Cloudy,180,2015-04-25 05:51:00
+1:28 AM,73.9,66.9,79,29.76,10.0,Variable,3.5,-,N/A,,Mostly Cloudy,0,2015-04-25 06:28:00
+1:51 AM,73.0,68.0,84,29.71,10.0,NNW,3.5,-,N/A,,Overcast,330,2015-04-25 06:51:00
+2:40 AM,72.0,68.0,87,29.75,10.0,Calm,Calm,-,N/A,,Mostly Cloudy,0,2015-04-25 07:40:00
+2:51 AM,72.0,68.0,87,29.70,10.0,Calm,Calm,-,N/A,,Mostly Cloudy,0,2015-04-25 07:51:00
+3:07 AM,73.0,69.1,87,29.77,10.0,NW,5.8,-,N/A,Thunderstorm,Thunderstorm,320,2015-04-25 08:07:00
+3:49 AM,73.4,69.8,88,29.81,1.8,SW,18.4,26.5,0.03,Rain-Thunderstorm,Heavy Thunderstorms and Rain,220,2015-04-25 08:49:00
+3:51 AM,73.9,70.0,87,29.73,0.2,WSW,13.8,26.5,0.09,Fog-Rain-Thunderstorm,Heavy Thunderstorms and Rain,240,2015-04-25 08:51:00
+3:58 AM,72.0,69.1,91,29.74,1.0,SSE,6.9,26.5,0.27,Rain-Thunderstorm,Heavy Thunderstorms and Rain,160,2015-04-25 08:58:00
+4:05 AM,72.0,69.1,91,29.74,5.0,ESE,10.4,-,0.39,Rain-Thunderstorm,Light Thunderstorms and Rain,120,2015-04-25 09:05:00
+4:23 AM,70.0,66.9,90,29.79,0.5,SW,23.0,29.9,0.46,Fog-Rain-Thunderstorm,Heavy Thunderstorms and Rain,230,2015-04-25 09:23:00
+4:35 AM,66.9,63.0,87,29.76,0.5,ESE,16.1,51.8,1.17,Fog-Rain-Thunderstorm,Heavy Thunderstorms and Rain,110,2015-04-25 09:35:00
+4:51 AM,66.0,64.0,93,29.78,2.0,SSE,17.3,-,1.55,Rain-Thunderstorm,Heavy Thunderstorms and Rain,150,2015-04-25 09:51:00
+4:57 AM,66.0,63.0,90,29.82,1.0,SSE,13.8,-,0.15,Rain-Thunderstorm,Heavy Thunderstorms and Rain,160,2015-04-25 09:57:00
+5:22 AM,66.0,63.0,90,29.81,2.5,East,5.8,-,0.52,Rain-Thunderstorm,Heavy Thunderstorms and Rain,100,2015-04-25 10:22:00
+5:35 AM,64.9,63.0,93,29.78,5.0,East,9.2,-,0.54,Rain-Thunderstorm,Light Thunderstorms and Rain,100,2015-04-25 10:35:00
+5:51 AM,66.0,63.0,90,29.73,8.0,Calm,Calm,-,0.54,Rain-Thunderstorm,Light Thunderstorms and Rain,0,2015-04-25 10:51:00
+6:38 AM,66.0,64.0,93,29.79,10.0,NW,6.9,-,0.02,Rain,Light Rain,320,2015-04-25 11:38:00
+6:51 AM,66.0,64.0,93,29.76,10.0,Variable,3.5,-,0.02,,Overcast,0,2015-04-25 11:51:00
+7:51 AM,66.9,64.0,90,29.78,10.0,Calm,Calm,-,0.00,,Mostly Cloudy,0,2015-04-25 12:51:00
+8:51 AM,71.1,66.9,87,29.78,10.0,NNW,4.6,-,N/A,,Scattered Clouds,340,2015-04-25 13:51:00
+9:51 AM,75.0,68.0,79,29.78,10.0,Calm,Calm,-,N/A,,Scattered Clouds,0,2015-04-25 14:51:00
+10:51 AM,81.0,71.1,72,29.77,10.0,NW,6.9,-,N/A,,Scattered Clouds,320,2015-04-25 15:51:00
+11:51 AM,84.9,55.9,37,29.76,10.0,Variable,4.6,-,N/A,,Partly Cloudy,0,2015-04-25 16:51:00
+12:51 PM,87.1,57.0,36,29.75,10.0,NNW,10.4,-,N/A,,Partly Cloudy,340,2015-04-25 17:51:00
+1:51 PM,88.0,55.0,32,29.73,10.0,NNW,5.8,-,N/A,,Partly Cloudy,330,2015-04-25 18:51:00
+2:51 PM,89.1,53.1,29,29.71,10.0,Variable,5.8,-,N/A,,Partly Cloudy,0,2015-04-25 19:51:00
+3:51 PM,90.0,53.1,28,29.68,10.0,South,9.2,-,N/A,,Partly Cloudy,190,2015-04-25 20:51:00
+4:51 PM,90.0,54.0,29,29.67,10.0,South,8.1,-,N/A,,Partly Cloudy,180,2015-04-25 21:51:00
+5:51 PM,89.1,55.0,31,29.66,10.0,SSW,10.4,-,N/A,,Partly Cloudy,210,2015-04-25 22:51:00
+6:51 PM,87.1,55.9,35,29.65,10.0,SSW,9.2,-,N/A,,Partly Cloudy,200,2015-04-25 23:51:00
+7:51 PM,84.9,55.9,37,29.66,10.0,SSW,6.9,-,N/A,,Partly Cloudy,200,2015-04-26 00:51:00
+8:51 PM,78.1,64.9,64,29.68,10.0,SE,6.9,-,N/A,,Partly Cloudy,140,2015-04-26 01:51:00
+9:51 PM,75.9,64.0,67,29.68,10.0,SE,4.6,-,N/A,,Partly Cloudy,130,2015-04-26 02:51:00
+10:51 PM,75.0,63.0,66,29.69,10.0,East,3.5,-,N/A,,Partly Cloudy,100,2015-04-26 03:51:00
+11:51 PM,75.0,70.0,84,29.69,10.0,South,9.2,-,N/A,,Scattered Clouds,170,2015-04-26 04:51:00

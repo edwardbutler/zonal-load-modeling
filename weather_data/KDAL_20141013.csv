@@ -1,0 +1,48 @@
+TimeCDT,TemperatureF,Dew PointF,Humidity,Sea Level PressureIn,VisibilityMPH,Wind Direction,Wind SpeedMPH,Gust SpeedMPH,PrecipitationIn,Events,Conditions,WindDirDegrees,DateUTC
+12:37 AM,73.9,70.0,87,29.61,8.0,South,23.0,28.8,N/A,,Overcast,170,2014-10-13 05:37:00
+12:53 AM,75.0,70.0,84,29.58,8.0,South,25.3,34.5,N/A,,Overcast,180,2014-10-13 05:53:00
+1:10 AM,75.9,70.0,82,29.60,10.0,South,19.6,31.1,N/A,,Overcast,190,2014-10-13 06:10:00
+1:40 AM,75.9,70.0,82,29.61,10.0,SSW,15.0,27.6,N/A,Thunderstorm,Thunderstorm,200,2014-10-13 06:40:00
+1:53 AM,75.0,70.0,84,29.53,7.0,SSE,29.9,40.3,0.03,Rain-Thunderstorm,Light Thunderstorms and Rain,160,2014-10-13 06:53:00
+2:15 AM,73.0,66.9,81,29.65,10.0,WNW,26.5,36.8,0.02,Rain-Thunderstorm,Light Thunderstorms and Rain,300,2014-10-13 07:15:00
+2:19 AM,66.0,61.0,84,29.65,7.0,NW,21.9,36.8,0.02,Rain-Thunderstorm,Light Thunderstorms and Rain,310,2014-10-13 07:19:00
+2:23 AM,64.0,61.0,90,29.64,2.0,NW,17.3,36.8,0.02,Rain-Thunderstorm,Heavy Thunderstorms and Rain,310,2014-10-13 07:23:00
+2:27 AM,64.0,61.0,90,29.64,0.8,NW,13.8,27.6,0.07,Rain-Thunderstorm,Heavy Thunderstorms and Rain,310,2014-10-13 07:27:00
+2:40 AM,63.0,61.0,93,29.67,1.5,WNW,9.2,21.9,0.62,Rain-Thunderstorm,Heavy Thunderstorms and Rain,300,2014-10-13 07:40:00
+2:46 AM,62.1,61.0,96,29.66,1.5,WNW,6.9,21.9,0.86,Rain-Thunderstorm,Heavy Thunderstorms and Rain,300,2014-10-13 07:46:00
+2:53 AM,63.0,61.0,93,29.65,1.5,WNW,10.4,-,1.04,Rain-Thunderstorm,Heavy Thunderstorms and Rain,300,2014-10-13 07:53:00
+3:08 AM,63.0,61.0,93,29.67,3.0,West,6.9,-,0.18,Rain-Thunderstorm,Thunderstorms and Rain,270,2014-10-13 08:08:00
+3:17 AM,63.0,61.0,93,29.67,2.5,NW,9.2,-,0.23,Rain-Thunderstorm,Thunderstorms and Rain,310,2014-10-13 08:17:00
+3:33 AM,63.0,61.0,93,29.66,4.0,West,5.8,-,0.31,Rain-Thunderstorm,Thunderstorms and Rain,280,2014-10-13 08:33:00
+3:53 AM,63.0,61.0,93,29.66,10.0,SW,3.5,-,0.34,Rain-Thunderstorm,Light Thunderstorms and Rain,230,2014-10-13 08:53:00
+4:12 AM,63.0,61.0,93,29.66,10.0,South,5.8,-,0.01,Rain,Light Rain,190,2014-10-13 09:12:00
+4:30 AM,63.0,61.0,93,29.68,8.0,South,8.1,-,0.03,Rain-Thunderstorm,Light Thunderstorms and Rain,180,2014-10-13 09:30:00
+4:53 AM,63.0,61.0,93,29.68,5.0,South,8.1,-,0.06,Rain-Thunderstorm,Light Thunderstorms and Rain,190,2014-10-13 09:53:00
+5:53 AM,63.0,61.0,93,29.65,5.0,SE,6.9,-,0.10,Rain-Thunderstorm,Thunderstorms and Rain,140,2014-10-13 10:53:00
+6:04 AM,63.0,62.1,97,29.65,4.0,South,9.2,-,0.04,Rain-Thunderstorm,Thunderstorms and Rain,170,2014-10-13 11:04:00
+6:19 AM,63.0,61.0,93,29.67,4.0,South,11.5,-,0.06,Rain-Thunderstorm,Light Thunderstorms and Rain,190,2014-10-13 11:19:00
+6:53 AM,62.1,61.0,96,29.63,6.0,South,8.1,-,0.09,Thunderstorm,Overcast,190,2014-10-13 11:53:00
+7:21 AM,62.1,61.0,96,29.66,10.0,SSW,5.8,-,N/A,,Overcast,210,2014-10-13 12:21:00
+7:53 AM,63.0,60.1,90,29.68,10.0,SW,8.1,-,0.00,,Overcast,220,2014-10-13 12:53:00
+7:56 AM,63.0,60.1,90,29.69,10.0,SSW,8.1,-,N/A,,Overcast,210,2014-10-13 12:56:00
+7:58 AM,63.0,61.0,93,29.69,10.0,SSW,6.9,-,N/A,,Overcast,200,2014-10-13 12:58:00
+8:24 AM,63.0,60.1,90,29.69,10.0,SW,11.5,-,N/A,,Overcast,220,2014-10-13 13:24:00
+8:53 AM,62.6,60.8,94,29.70,10.0,SW,10.4,-,N/A,,Overcast,230,2014-10-13 13:53:00
+9:27 AM,64.0,59.0,84,29.70,10.0,West,10.4,-,N/A,,Mostly Cloudy,280,2014-10-13 14:27:00
+9:45 AM,64.0,57.9,80,29.71,10.0,West,13.8,-,N/A,,Mostly Cloudy,270,2014-10-13 14:45:00
+9:53 AM,64.0,57.0,78,29.70,10.0,West,20.7,28.8,N/A,,Mostly Cloudy,270,2014-10-13 14:53:00
+10:53 AM,62.1,52.0,70,29.71,10.0,WNW,19.6,39.1,N/A,,Mostly Cloudy,290,2014-10-13 15:53:00
+11:53 AM,62.1,50.0,65,29.73,10.0,West,27.6,36.8,N/A,,Overcast,280,2014-10-13 16:53:00
+12:53 PM,60.8,51.8,72,29.75,10.0,WNW,26.5,38.0,N/A,,Overcast,290,2014-10-13 17:53:00
+1:53 PM,62.1,51.1,67,29.75,10.0,WNW,24.2,33.4,N/A,,Overcast,300,2014-10-13 18:53:00
+2:08 PM,63.0,51.1,65,29.76,10.0,WNW,27.6,38.0,N/A,,Overcast,300,2014-10-13 19:08:00
+2:53 PM,64.4,51.8,64,29.76,10.0,NW,26.5,46.0,N/A,,Mostly Cloudy,310,2014-10-13 19:53:00
+3:53 PM,64.4,50.0,59,29.80,10.0,NW,21.9,47.2,N/A,,Mostly Cloudy,320,2014-10-13 20:53:00
+4:53 PM,64.0,50.0,60,29.81,10.0,NW,26.5,39.1,N/A,,Mostly Cloudy,320,2014-10-13 21:53:00
+5:53 PM,64.9,48.9,56,29.85,10.0,NW,20.7,38.0,N/A,,Mostly Cloudy,320,2014-10-13 22:53:00
+6:53 PM,64.9,48.9,56,29.86,10.0,NW,17.3,27.6,N/A,,Mostly Cloudy,320,2014-10-13 23:53:00
+7:53 PM,64.0,48.9,58,29.89,10.0,NW,10.4,-,N/A,,Mostly Cloudy,320,2014-10-14 00:53:00
+8:53 PM,63.0,48.9,60,29.92,10.0,NW,9.2,-,N/A,,Partly Cloudy,310,2014-10-14 01:53:00
+9:53 PM,62.6,46.4,55,29.95,10.0,NW,10.4,-,N/A,,Scattered Clouds,310,2014-10-14 02:53:00
+10:53 PM,62.1,46.0,56,29.95,10.0,WNW,5.8,-,N/A,,Partly Cloudy,290,2014-10-14 03:53:00
+11:53 PM,61.0,46.0,58,29.95,10.0,West,5.8,-,N/A,,Clear,280,2014-10-14 04:53:00
