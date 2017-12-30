@@ -13,6 +13,8 @@ Example
 import pandas as pd
 from datetime import datetime
 import os
+import time
+import sqlite3
 
 
 def convert_date_time_tuple_into_date_time_object(date_time_tuple):
@@ -66,6 +68,8 @@ def read_load_data_from_csv(csv_path):
     # Load the original DataFrame, use easier-to-read column names, and drop unnecessary column
     original_df = pd.read_csv(csv_path).rename(columns={"OperDay" : "Date"}).drop(["TOTAL", "DSTFlag"],axis=1)
 
+    original_df.name = csv_path.split("_")[1]
+
     # Combine the originally separate date and hour columns into a single DateTime column
     return combine_date_and_hour_columns(original_df)
 
@@ -89,6 +93,11 @@ def read_weather_data_from_csv(csv_path):
 
     # Round up the hour of each Date to the nearest whole hour
     original_df["Date"] = original_df["DateUTC"].apply(roundUTCHourUp)
+
+    # Rename Temperature field to include city name
+    city = csv_path.split("_")[1]
+    original_df[city] = original_df["TemperatureF"]
+    original_df = original_df.drop(["TemperatureF", "DateUTC"], axis=1)
 
     return original_df
 
@@ -115,27 +124,50 @@ def compute_aggregate_weather_data():
 
     # get a list of all the csv files names in the 'weather_data' directory
     files = filter(lambda x: x[-4:] == ".csv", os.listdir('weather_data'))
+    print len(files), " weather csv files"
 
     # convert the list of csv file names to a list of corresponding DataFrames
+    # Make adjustments for the *specific* city - for example, label column "Dallas Tempeature", for Dallas
     dfs = map(lambda file_name: read_weather_data_from_csv("./weather_data/" + file_name), files)
 
+    # print "\n\nlist of df's: ", dfs
+    dallas_dfs = dfs.filter(lambda df: df.name.contains("Dal"))
+    houston_dfs = dfs.filter(lambda df: df.name.contains("Hou"))
+
+    dallas_df = reduce((lambda df1, df2: df1.merge(df2, how="outer")),dallas_dfs)
+    houston_df = reduce((lambda df1, df2: df1.merge(df2, how="outer")),houston_dfs)
+
+    aggregate_df = dallas_df.merge(houston_df, on="Date", how="outer")
+
+
     # fold the list of data frames into a single data frame
-    aggregate_df = reduce(lambda df1, df2: pd.concat([df1, df2]), dfs)
+    # aggregate_df = reduce((lambda df1, df2: pd.concat([df1, df2],axis=0)), dfs)
+    # print "\n\naggregate: ",aggregate_df
 
     return aggregate_df
 
+
+start_time = time.time()
+
 # Testing
-load_data = compute_aggregate_load_data()
+# load_data = compute_aggregate_load_data()
+
 weather_data = compute_aggregate_weather_data()
+print weather_data
+
 
 # Merge the weather and load data into a single DataFrame
-total = pd.merge(load_data,weather_data,on="Date")
+# total = pd.merge(load_data,weather_data,on="Date")
+#
+# print total.head()
+# print total.shape
+#
+# print("--- %s seconds ---" % (time.time() - start_time))
 
-print total.head()
-print total.shape
 
 # df1 = read_load_data_from_csv("./system_load_by_region/cdr.00013101.0000000000000000.20140102.055001.ACTUALSYSLOADWZNP6345.csv")
 # df2 = read_weather_data_from_csv("./weather_data/KDAL_20140101.csv")
+# print df2
 #
 #
 # print df1.head()
@@ -144,6 +176,11 @@ print total.shape
 #
 # print "\nMERGING\n"
 # print merge_data_frames_by_column(df1, df2, "Date")
+
+
+conn = sqlite3.connect("output.db")
+weather_data.to_sql("name", con=conn)
+
 
 
 
