@@ -14,8 +14,7 @@ import pandas as pd
 from datetime import datetime
 import os
 import time
-import sqlite3
-
+import sqlite3  
 
 def convert_date_time_tuple_into_date_time_object(date_time_tuple):
     """
@@ -115,7 +114,8 @@ def compute_aggregate_load_data():
     dfs = map(lambda file_name: read_load_data_from_csv("./system_load_by_region/" + file_name), files)
 
     # fold the list of data frames into a single data frame
-    aggregate_df = reduce(lambda df1, df2: pd.concat([df1, df2]), dfs)
+    aggregate_df = pd.concat(dfs).reset_index().drop(["index"],axis=1)
+    # aggregate_df = reduce(lambda df1, df2: pd.concat([df1, df2]), dfs)
 
     return aggregate_df
 
@@ -128,21 +128,24 @@ def compute_aggregate_weather_data():
 
     # convert the list of csv file names to a list of corresponding DataFrames
     # Make adjustments for the *specific* city - for example, label column "Dallas Tempeature", for Dallas
-    dfs = map(lambda file_name: read_weather_data_from_csv("./weather_data/" + file_name), files)
+    dallas_files = filter(lambda file_name : "KDAL" in file_name, files)
+    houston_files = filter(lambda file_name : "KHOU" in file_name, files)
+    san_antonio_files = filter(lambda file_name : "KSAT" in file_name, files)
 
-    # print "\n\nlist of df's: ", dfs
-    dallas_dfs = dfs.filter(lambda df: df.name.contains("Dal"))
-    houston_dfs = dfs.filter(lambda df: df.name.contains("Hou"))
+    print "# of Dallas FILES: ", len(dallas_files)
+    print "# of Houston FILES: ", len(houston_files)
+    print "# of SAT FILES: ", len(san_antonio_files)
 
-    dallas_df = reduce((lambda df1, df2: df1.merge(df2, how="outer")),dallas_dfs)
-    houston_df = reduce((lambda df1, df2: df1.merge(df2, how="outer")),houston_dfs)
+    dallas_dfs = map(lambda file_name: read_weather_data_from_csv("./weather_data/" + file_name), dallas_files)
+    houston_dfs = map(lambda file_name: read_weather_data_from_csv("./weather_data/" + file_name), houston_files)
+    san_antonio_dfs = map(lambda file_name: read_weather_data_from_csv("./weather_data/" + file_name), san_antonio_files)
 
-    aggregate_df = dallas_df.merge(houston_df, on="Date", how="outer")
-
+    dallas_df = pd.concat(dallas_dfs)
+    houston_df = pd.concat(houston_dfs)
+    san_antonio_df = pd.concat(san_antonio_dfs)
 
     # fold the list of data frames into a single data frame
-    # aggregate_df = reduce((lambda df1, df2: pd.concat([df1, df2],axis=0)), dfs)
-    # print "\n\naggregate: ",aggregate_df
+    aggregate_df = reduce(lambda df1, df2: pd.merge(df1, df2, on="Date", how="outer"), [dallas_df, houston_df, san_antonio_df]).sort_values("Date")
 
     return aggregate_df
 
@@ -150,36 +153,16 @@ def compute_aggregate_weather_data():
 start_time = time.time()
 
 # Testing
-# load_data = compute_aggregate_load_data()
-
+load_data = compute_aggregate_load_data()
 weather_data = compute_aggregate_weather_data()
-print weather_data
 
 
 # Merge the weather and load data into a single DataFrame
-# total = pd.merge(load_data,weather_data,on="Date")
-#
-# print total.head()
-# print total.shape
-#
-# print("--- %s seconds ---" % (time.time() - start_time))
-
-
-# df1 = read_load_data_from_csv("./system_load_by_region/cdr.00013101.0000000000000000.20140102.055001.ACTUALSYSLOADWZNP6345.csv")
-# df2 = read_weather_data_from_csv("./weather_data/KDAL_20140101.csv")
-# print df2
-#
-#
-# print df1.head()
-# print "-"*50
-# print df2.head()
-#
-# print "\nMERGING\n"
-# print merge_data_frames_by_column(df1, df2, "Date")
-
+total = pd.merge(load_data,weather_data,on="Date")
+print total.sample(100)
 
 conn = sqlite3.connect("output.db")
-weather_data.to_sql("name", con=conn)
+total.to_sql("name", con=conn)
 
 
 
