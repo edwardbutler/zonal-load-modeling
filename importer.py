@@ -14,7 +14,8 @@ import pandas as pd
 from datetime import datetime
 import os
 import time
-import sqlite3  
+import sqlite3
+import argparse
 
 def convert_date_time_tuple_into_date_time_object(date_time_tuple):
     """
@@ -149,20 +150,23 @@ def compute_aggregate_weather_data():
 
     return aggregate_df
 
+def get_total_data():
+    return pd.merge(compute_aggregate_load_data(), compute_aggregate_weather_data(),on="Date")
 
-start_time = time.time()
-
-# Testing
-load_data = compute_aggregate_load_data()
-weather_data = compute_aggregate_weather_data()
+def write_total_data_to_db(db_name):
+    conn = sqlite3.connect(db_name)
+    total.to_sql("results", con=conn)
 
 
-# Merge the weather and load data into a single DataFrame
-total = pd.merge(load_data,weather_data,on="Date")
-print total.sample(100)
+parser = argparse.ArgumentParser()
+parser.add_argument("db_name", help="the name of the database to which the load/weather data should be inputted")
+args = parser.parse_args()
 
-conn = sqlite3.connect("output.db")
-total.to_sql("name", con=conn)
+
+total = get_total_data()
+write_total_data_to_db(args.db_name)
+
+
 
 
 
