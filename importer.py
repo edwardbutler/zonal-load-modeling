@@ -13,9 +13,9 @@ Example
 import pandas as pd
 from datetime import datetime
 import os
-import time
 import sqlite3
 import argparse
+
 
 def convert_date_time_tuple_into_date_time_object(date_time_tuple):
     """
@@ -74,7 +74,7 @@ def read_load_data_from_csv(csv_path):
     return combine_date_and_hour_columns(original_df)
 
 
-def roundUTCHourUp(dateString):
+def round_utc_hour_up(dateString):
     dateObject = datetime.strptime(dateString, "%Y-%m-%d %H:%M:%S")
     newHour = (dateObject.hour + 1) % 24
     dateObject = dateObject.replace(hour=newHour)
@@ -92,11 +92,11 @@ def read_weather_data_from_csv(csv_path):
     original_df = pd.read_csv(csv_path)[["DateUTC","TemperatureF"]]
 
     # Round up the hour of each Date to the nearest whole hour
-    original_df["Date"] = original_df["DateUTC"].apply(roundUTCHourUp)
+    original_df["Date"] = original_df["DateUTC"].apply(round_utc_hour_up)
 
     # Rename Temperature field to include city name
-    city = csv_path.split("_")[1]
-    original_df[city] = original_df["TemperatureF"]
+    city = csv_path.split("_")[1].split("/")[1]
+    original_df[city + "_TemperatureF"] = original_df["TemperatureF"]
     original_df = original_df.drop(["TemperatureF", "DateUTC"], axis=1)
 
     return original_df
@@ -133,9 +133,9 @@ def compute_aggregate_weather_data():
     houston_files = filter(lambda file_name : "KHOU" in file_name, files)
     san_antonio_files = filter(lambda file_name : "KSAT" in file_name, files)
 
-    print "# of Dallas FILES: ", len(dallas_files)
-    print "# of Houston FILES: ", len(houston_files)
-    print "# of SAT FILES: ", len(san_antonio_files)
+    print "\t# of Dallas FILES: ", len(dallas_files)
+    print "\t# of Houston FILES: ", len(houston_files)
+    print "\t# of SAT FILES: ", len(san_antonio_files)
 
     dallas_dfs = map(lambda file_name: read_weather_data_from_csv("./weather_data/" + file_name), dallas_files)
     houston_dfs = map(lambda file_name: read_weather_data_from_csv("./weather_data/" + file_name), houston_files)
@@ -150,21 +150,31 @@ def compute_aggregate_weather_data():
 
     return aggregate_df
 
+
 def get_total_data():
     return pd.merge(compute_aggregate_load_data(), compute_aggregate_weather_data(),on="Date")
 
-def write_total_data_to_db(db_name):
+
+def write_df_to_db(df, db_name):
+    """
+    Given a db
+    :param db_name:
+    :return:
+    """
     conn = sqlite3.connect(db_name)
-    total.to_sql("results", con=conn)
+    df.to_sql("results", con=conn)
 
 
+# Create parser object to parse the command line arguments
 parser = argparse.ArgumentParser()
 parser.add_argument("db_name", help="the name of the database to which the load/weather data should be inputted")
 args = parser.parse_args()
 
-
+# Compute the grand dataframe
 total = get_total_data()
-write_total_data_to_db(args.db_name)
+
+# Write the grand DF to a SQLite DB
+write_df_to_db(total, args.db_name)
 
 
 
