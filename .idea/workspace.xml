@@ -2,6 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eadafd41-6881-43b8-9c52-f21158a038a9" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/model.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/csv_reading.ipynb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/finals.db" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/load_playground.ipynb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weather_playground.ipynb" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/importer.py" afterPath="$PROJECT_DIR$/importer.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -12,19 +18,46 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/saracen-project$model.coverage" NAME="model Coverage Results" MODIFIED="1515691519709" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/saracen-project$Unittests_in_saracen_project.coverage" NAME="Unittests in saracen-project Coverage Results" MODIFIED="1514503689053" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/saracen-project$importer.coverage" NAME="importer Coverage Results" MODIFIED="1515109281019" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/saracen-project$importer.coverage" NAME="importer Coverage Results" MODIFIED="1515607443417" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="saracen-project" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="model.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/model.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="484">
+              <caret line="43" column="46" lean-forward="false" selection-start-line="43" selection-start-column="46" selection-end-line="43" selection-end-column="46" />
+              <folding>
+                <element signature="e#59#78#0" expanded="true" />
+                <marker date="1515695973000" expanded="true" signature="634:648" ph="SELECT * FRO... TestTable1" />
+                <marker date="1515695973000" expanded="true" signature="634:655" ph="SELECT * FRO... result" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>system_load</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -33,6 +66,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/importer.py" />
+        <option value="$PROJECT_DIR$/model.py" />
       </list>
     </option>
   </component>
@@ -63,7 +97,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -79,6 +112,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -88,8 +122,9 @@
     <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/edwardbutler/Desktop/saracen-project/model.py" />
   </component>
-  <component name="RunManager" selected="Python.importer">
+  <component name="RunManager" selected="Python.model">
     <configuration default="false" name="importer" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -129,6 +164,24 @@
       <option name="PUREUNITTEST" value="true" />
       <option name="PARAMS" value="" />
       <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="model" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="saracen-project" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/model.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
@@ -345,14 +398,16 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
-    <list size="2">
+    <list size="3">
       <item index="0" class="java.lang.String" itemvalue="Python.importer" />
       <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in saracen-project" />
+      <item index="2" class="java.lang.String" itemvalue="Python.model" />
     </list>
     <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Python.importer" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in saracen-project" />
+      <list size="3">
+        <item index="0" class="java.lang.String" itemvalue="Python.model" />
+        <item index="1" class="java.lang.String" itemvalue="Python.importer" />
+        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in saracen-project" />
       </list>
     </recent_temporary>
   </component>
@@ -378,23 +433,23 @@
     <frame x="12" y="22" width="1404" height="878" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18447293" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18447293" sideWeight="0.49532712" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32943925" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32943925" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32943925" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18447293" sideWeight="0.5046729" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32943925" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -409,13 +464,72 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="900">
+          <caret line="65" column="37" lean-forward="true" selection-start-line="65" selection-start-column="37" selection-end-line="65" selection-end-column="37" />
+          <folding>
+            <element signature="e#59#78#0" expanded="true" />
+            <marker date="1515695973000" expanded="true" signature="634:648" ph="SELECT * FRO... TestTable1" />
+            <marker date="1515695973000" expanded="true" signature="634:655" ph="SELECT * FRO... result" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="50" column="48" lean-forward="true" selection-start-line="50" selection-start-column="48" selection-end-line="50" selection-end-column="48" />
+          <folding>
+            <element signature="e#59#78#0" expanded="true" />
+            <marker date="1515695973000" expanded="true" signature="634:648" ph="SELECT * FRO... TestTable1" />
+            <marker date="1515695973000" expanded="true" signature="634:655" ph="SELECT * FRO... result" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="27" column="69" lean-forward="true" selection-start-line="27" selection-start-column="69" selection-end-line="27" selection-end-column="69" />
+          <folding>
+            <element signature="e#59#78#0" expanded="true" />
+            <marker date="1515695973000" expanded="true" signature="634:648" ph="SELECT * FRO... TestTable1" />
+            <marker date="1515695973000" expanded="true" signature="634:655" ph="SELECT * FRO... result" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="23" column="12" lean-forward="false" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
+          <folding>
+            <element signature="e#59#78#0" expanded="true" />
+            <marker date="1515695973000" expanded="true" signature="634:648" ph="SELECT * FRO... TestTable1" />
+            <marker date="1515695973000" expanded="true" signature="634:655" ph="SELECT * FRO... result" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/importer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2790">
+          <caret line="190" column="24" lean-forward="true" selection-start-line="190" selection-start-column="24" selection-end-line="190" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/importer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2010">
+          <caret line="138" column="0" lean-forward="true" selection-start-line="138" selection-start-column="0" selection-end-line="138" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/importer.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2040">
           <caret line="140" column="0" lean-forward="true" selection-start-line="140" selection-start-column="0" selection-end-line="140" selection-end-column="0" />
-          <folding>
-            <element signature="e#599#618#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -423,9 +537,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
           <caret line="33" column="46" lean-forward="true" selection-start-line="33" selection-start-column="46" selection-end-line="33" selection-end-column="46" />
-          <folding>
-            <element signature="e#599#618#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -433,18 +544,55 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1486455066000" expanded="true" signature="0:1014" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/importer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1845">
-          <caret line="123" column="31" lean-forward="true" selection-start-line="123" selection-start-column="31" selection-end-line="123" selection-end-column="31" />
+        <state relative-caret-position="397">
+          <caret line="253" column="0" lean-forward="false" selection-start-line="253" selection-start-column="0" selection-end-line="256" selection-end-column="0" />
           <folding>
-            <element signature="e#599#618#0" expanded="true" />
+            <marker date="1515695746000" expanded="true" signature="0:597" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1515695746000" expanded="true" signature="599:701" ph="import ..." />
+            <marker date="1515695746000" expanded="true" signature="772:1959" ph="..." />
+            <marker date="1515695746000" expanded="true" signature="777:1168" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1515695746000" expanded="true" signature="1480:1579" ph="..." />
+            <marker date="1515695746000" expanded="true" signature="1590:1831" ph="..." />
+            <marker date="1515695746000" expanded="true" signature="2008:2599" ph="..." />
+            <marker date="1515695746000" expanded="true" signature="2013:2301" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1515695746000" expanded="true" signature="2640:3286" ph="..." />
+            <marker date="1515695746000" expanded="true" signature="2645:2887" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1515695746000" expanded="true" signature="3323:3867" ph="..." />
+            <marker date="1515695746000" expanded="true" signature="3328:3651" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1515695746000" expanded="true" signature="3911:4698" ph="..." />
+            <marker date="1515695746000" expanded="true" signature="3916:4158" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1515695746000" expanded="true" signature="4756:5236" ph="..." />
+            <marker date="1515695746000" expanded="true" signature="4761:5190" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1515695746000" expanded="true" signature="5273:6637" ph="..." />
+            <marker date="1515695746000" expanded="true" signature="5278:5453" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1515695746000" expanded="true" signature="5691:6173" ph="..." />
+            <marker date="1515695746000" expanded="true" signature="6685:7008" ph="..." />
+            <marker date="1515695746000" expanded="true" signature="6690:6939" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1515695746000" expanded="true" signature="7048:9291" ph="..." />
+            <marker date="1515695746000" expanded="true" signature="7053:7241" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1515695746000" expanded="true" signature="7514:7967" ph="..." />
+            <marker date="1515695746000" expanded="true" signature="9315:9515" ph="..." />
+            <marker date="1515695746000" expanded="true" signature="9320:9420" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1515695746000" expanded="true" signature="9550:9913" ph="..." />
+            <marker date="1515695746000" expanded="true" signature="9555:9766" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1515695746000" expanded="true" signature="9927:10382" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="43" column="46" lean-forward="false" selection-start-line="43" selection-start-column="46" selection-end-line="43" selection-end-column="46" />
+          <folding>
+            <element signature="e#59#78#0" expanded="true" />
+            <marker date="1515695973000" expanded="true" signature="634:648" ph="SELECT * FRO... TestTable1" />
+            <marker date="1515695973000" expanded="true" signature="634:655" ph="SELECT * FRO... result" />
           </folding>
         </state>
       </provider>
